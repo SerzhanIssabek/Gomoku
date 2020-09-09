@@ -116,7 +116,7 @@ namespace GomokuConsoleProject
         }
 
         /// <summary>
-        /// Ход игрока "y"
+        /// Ход игрока "o"
         /// </summary>
         public void MoveO(int x, int y, string player)
         {
