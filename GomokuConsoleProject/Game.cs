@@ -13,8 +13,8 @@ namespace GomokuConsoleProject
     {
         public Board Board;
 
-        private string playerOnX = "x";
-        private string playerOnO = "o";
+        private char playerOnX = "x";
+        private char playerOnO = "o";
 
         public Game()
         {
@@ -40,7 +40,7 @@ namespace GomokuConsoleProject
         /// <param name="x">Индекс массива. Номер строки</param>
         /// <param name="y">Индекс массива. Номер столбца</param>
         /// <param name="player">Камень игрока</param>
-        public void InitializeValue(int x, int y, string player)
+        public void InitializeValue(int x, int y, char player)
         {
             Board.board[x, y] = player; // инициализируем камень игрока в доску
 
@@ -54,7 +54,7 @@ namespace GomokuConsoleProject
             }
         }
 
-        public bool GameOver(int x, int y, string playerChar)
+        public bool GameOver(int x, int y, char playerChar)
         {
             if (MaxLength(x, y, playerChar) >= 4)
             {
@@ -91,7 +91,7 @@ namespace GomokuConsoleProject
         /// <summary>
         /// Ход игрока "x"  
         /// </summary>
-        public void MoveX(int x, int y, string player)
+        public void MoveX(int x, int y, char player)
         {
 
             if (!GameOver(x, y, player))
@@ -118,7 +118,7 @@ namespace GomokuConsoleProject
         /// <summary>
         /// Ход игрока "o"
         /// </summary>
-        public void MoveO(int x, int y, string player)
+        public void MoveO(int x, int y, char player)
         {
             if (!GameOver(x, y, player))
             {
@@ -148,7 +148,7 @@ namespace GomokuConsoleProject
         /// <param name="y">Столбец</param>
         /// <param name="player">Игрок</param>
         /// <returns>Максимальную длину из направлений</returns>
-        public int MaxLength(int x, int y, string player)
+        public int MaxLength(int x, int y, char player)
         {
 
             // Линиям присваивается количество камней одного цвета составляющих непрерывный ряд от координаты последнего хода в направлений линий.
@@ -174,7 +174,7 @@ namespace GomokuConsoleProject
         /// Проверка ячеек для определения занятых линий
         /// </summary>
         /// <returns></returns>
-        public int CheckCell(int x, int y, int a, int b, string player)
+        public int CheckCell(int x, int y, int a, int b, char player)
         {
             int result = 0;
             for (int i = 1; i < 5; i++)
@@ -195,7 +195,7 @@ namespace GomokuConsoleProject
         /// <summary>
         /// Поменять значение игрока
         /// </summary>
-        public string ReversePlayerChar(string player)
+        public string ReversePlayerChar(char player)
         {
             if (player == "x")
             {
@@ -210,7 +210,7 @@ namespace GomokuConsoleProject
         /// </summary>
         /// <param name="player"></param>
         /// <returns></returns>
-        public Index GetBestMove(string player)
+        public Index GetBestMove(char player)
         {
             Index? bestMove = null;
             IComparable CurrentMove = null;     // Нынешний ход
