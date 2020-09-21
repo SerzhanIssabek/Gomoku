@@ -13,8 +13,8 @@ namespace GomokuConsoleProject
     {
         public Board Board;
 
-        private char playerOnX = "x";
-        private char playerOnO = "o";
+        private char playerOnX = 'x';
+        private char playerOnO = 'o';
 
         public Game()
         {
