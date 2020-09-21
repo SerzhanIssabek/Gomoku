@@ -75,7 +75,7 @@ namespace GomokuConsoleProject
             int exist = 0;
             foreach (var k in Board.board)
             {
-                if (k == "_")
+                if (k == '_')
                 {
                     exist++;
                     if (exist > 0)
@@ -195,14 +195,14 @@ namespace GomokuConsoleProject
         /// <summary>
         /// Поменять значение игрока
         /// </summary>
-        public string ReversePlayerChar(char player)
+        public char ReversePlayerChar(char player)
         {
-            if (player == "x")
+            if (player == 'x')
             {
-                return "o";
+                return 'o';
             }
 
-            return "x";
+            return 'x';
         }
 
         /// <summary>
@@ -223,7 +223,7 @@ namespace GomokuConsoleProject
             {
                 for (int j = 0; j < 15; j++)
                 {
-                    if (Board.GetElement(i, j) == "_")
+                    if (Board.GetElement(i, j) == '_')
                     {
                         IComparable possibleMoves;      // Возможный ход
                         currentplayer = 1 + MaxLength(i, j, player);                    // Непрерывный ряд камней игрока N + 1 
