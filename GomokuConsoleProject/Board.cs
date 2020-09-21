@@ -9,7 +9,7 @@ namespace GomokuConsoleProject
     public class Board
     {
 
-        public string[,] board;
+        public char[,] board;
 
         public Board()
         {
@@ -55,13 +55,13 @@ namespace GomokuConsoleProject
         /// </summary>
         public void Clear()
         {
-            this.board = new string[15, 15];
+            this.board = new char[15, 15];
 
             for (int i = 0; i < 15; i++)
             {
                 for (int j = 0; j < 15; j++)
                 {
-                    board[i, j] = "_";
+                    board[i, j] = '_';
                 }
             }
         }
