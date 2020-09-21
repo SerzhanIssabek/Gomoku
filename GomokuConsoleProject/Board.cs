@@ -22,11 +22,11 @@ namespace GomokuConsoleProject
         /// <param name="x">Строка</param>
         /// <param name="y">Столбец</param>
         /// <returns></returns>
-        public string GetElement(int x, int y)
+        public char GetElement(int x, int y)
         {
             if (x < 0 || x > 14 || y < 0 || y > 14)
             {
-                return null;
+                return '\0';
             }
 
             return board[x, y];
