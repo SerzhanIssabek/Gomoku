@@ -1,2 +1,2 @@
 # Gomoku
-I am ashamed 
+My pet project...
